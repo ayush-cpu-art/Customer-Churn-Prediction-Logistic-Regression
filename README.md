@@ -1,47 +1,89 @@
 # 📉 Customer Churn Prediction using Logistic Regression
 
-A machine learning project that predicts customer churn using Logistic Regression on the Telco Customer Churn dataset.
-
 ## 📌 Overview
 
-This project implements an end-to-end classification workflow to predict whether a customer is likely to churn.
+This project uses **Logistic Regression** to predict whether a telecom customer is likely to churn based on demographic information and service-related features.
 
-The workflow includes data exploration, missing-value handling, categorical encoding, train-test splitting, Logistic Regression training, and evaluation using classification metrics and a confusion matrix.
+The project covers data preprocessing, categorical feature encoding, model training, evaluation, and confusion matrix visualization.
 
-## 🎯 Objectives
+---
 
-- Explore the Telco Customer Churn dataset
-- Identify numerical and categorical features
-- Handle missing values
-- Encode categorical variables
-- Remove unnecessary identifier columns
-- Train a Logistic Regression classifier
-- Evaluate churn predictions using multiple classification metrics
+## 🎯 Objective
+
+The objective is to build a classification model that predicts whether a customer will:
+
+- **Stay** with the company
+- **Churn** from the company
+
+---
 
 ## 📊 Dataset
 
-The project uses the **Telco Customer Churn Dataset**.
+**Dataset:** Telco Customer Churn Dataset
 
-The dataset contains **7,043 customer records** and 21 original columns.
+The dataset contains information about customer demographics, subscribed services, account details, and churn status.
+
+The dataset contains **7,043 customer records**.
 
 ### Target Variable
 
-`Churn`
+- `Yes` → Customer churned
+- `No` → Customer did not churn
 
-| Value | Meaning |
-|---|---|
-| `Yes` | Customer churned |
-| `No` | Customer did not churn |
+---
 
-The `customerID` column was removed before model training.
+## 🛠️ Technologies Used
 
-## ⚙️ Data Preprocessing
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Jupyter Notebook
 
-### Missing Values
+---
 
-`TotalCharges` was initially stored as an object/string column.
+## ⚙️ Methodology
 
-It was converted to numeric values using:
+1. Load the dataset using Pandas.
+2. Explore the dataset using `head()`, `info()`, and `describe()`.
+3. Identify numerical and categorical features.
+4. Convert `TotalCharges` to a numerical data type.
+5. Handle missing values in `TotalCharges`.
+6. Encode categorical variables.
+7. Split the dataset into training and testing sets using an 80:20 stratified split.
+8. Train a Logistic Regression classifier.
+9. Evaluate the model using Accuracy, Precision, Recall, and F1-Score.
+10. Generate a confusion matrix to analyze classification performance.
 
-```python
-pd.to_numeric(df["TotalCharges"], errors="coerce")
+---
+
+## 🤖 Model
+
+### Logistic Regression
+
+Logistic Regression is used to predict the probability of a customer belonging to the churn class.
+
+The model was trained using the preprocessed customer features.
+
+---
+
+## 📈 Results
+
+The Logistic Regression model achieved the following performance on the test dataset:
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 79.91% |
+| Precision | 64.09% |
+| Recall | 55.35% |
+| F1-Score | 59.40% |
+
+### Confusion Matrix
+
+```text
+                 Predicted
+              No       Yes
+Actual No     919      116
+Actual Yes    167      207
