@@ -1,6 +1,6 @@
-# 📉 Customer Churn Prediction using Logistic Regression
+#  Customer Churn Prediction using Logistic Regression
 
-## 📌 Overview
+##  Overview
 
 This project uses **Logistic Regression** to predict whether a telecom customer is likely to churn based on demographic information and service-related features.
 
@@ -8,7 +8,7 @@ The project covers data preprocessing, categorical feature encoding, model train
 
 ---
 
-## 🎯 Objective
+##  Objective
 
 The objective is to build a classification model that predicts whether a customer will:
 
@@ -17,7 +17,7 @@ The objective is to build a classification model that predicts whether a custome
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 **Dataset:** Telco Customer Churn Dataset
 
@@ -32,7 +32,7 @@ The dataset contains **7,043 customer records**.
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - Python
 - Pandas
@@ -44,7 +44,7 @@ The dataset contains **7,043 customer records**.
 
 ---
 
-## ⚙️ Methodology
+##  Methodology
 
 1. Load the dataset using Pandas.
 2. Explore the dataset using `head()`, `info()`, and `describe()`.
@@ -59,7 +59,7 @@ The dataset contains **7,043 customer records**.
 
 ---
 
-## 🤖 Model
+##  Model
 
 ### Logistic Regression
 
@@ -69,7 +69,7 @@ The model was trained using the preprocessed customer features.
 
 ---
 
-## 📈 Results
+##  Results
 
 The Logistic Regression model achieved the following performance on the test dataset:
 
